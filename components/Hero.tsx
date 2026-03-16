@@ -14,7 +14,7 @@ export default function Hero() {
         className="absolute inset-0 z-0"
       >
         <Image
-          src="https://images.pexels.com/photos/3951375/pexels-photo-3951375.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
+          src="https://images.pexels.com/photos/2498430/pexels-photo-2498430.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
           alt="Indian Bridal Makeup Transformation"
           fill
           className="object-cover opacity-60"
