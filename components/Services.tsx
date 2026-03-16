@@ -8,7 +8,7 @@ const serviceCategories = [
   {
     title: 'Makeup Services',
     icon: <Sparkles className="w-8 h-8 text-[#d48995]" />,
-    bgImage: 'https://images.pexels.com/photos/2058147/pexels-photo-2058147.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
+    bgImage: 'https://images.pexels.com/photos/12260115/pexels-photo-12260115.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     items: [
       'Airbrush Makeup (flawless, photo-ready finish)',
       'Bridal Makeup (traditional to modern styles)',
@@ -23,7 +23,7 @@ const serviceCategories = [
   {
     title: 'Hair Services',
     icon: <Scissors className="w-8 h-8 text-[#d48995]" />,
-    bgImage: 'https://images.pexels.com/photos/3993320/pexels-photo-3993320.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
+    bgImage: 'https://images.pexels.com/photos/10561323/pexels-photo-10561323.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     items: [
       'Hairstyling (any occasion, tailored to hair type)',
       'Hair Treatments (hydration, repair, shine)',
@@ -38,7 +38,7 @@ const serviceCategories = [
   {
     title: 'Nail Salon',
     icon: <Hand className="w-8 h-8 text-[#d48995]" />,
-    bgImage: 'https://images.pexels.com/photos/887352/pexels-photo-887352.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
+    bgImage: 'https://images.pexels.com/photos/5874876/pexels-photo-5874876.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     items: [
       'Manicure',
       'Pedicure',
@@ -50,7 +50,7 @@ const serviceCategories = [
   {
     title: 'Beautician Services',
     icon: <Droplets className="w-8 h-8 text-[#d48995]" />,
-    bgImage: 'https://images.pexels.com/photos/3993318/pexels-photo-3993318.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
+    bgImage: 'https://images.pexels.com/photos/8558244/pexels-photo-8558244.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop',
     items: [
       'Body Waxing (silky smooth skin)',
       'Eyebrow Threading (precise shaping)',
@@ -125,7 +125,7 @@ export default function Services() {
             </div>
             <div className="w-full md:w-1/3 aspect-square relative rounded-2xl overflow-hidden border border-[#c88d94]/20">
               <Image
-                src="https://images.pexels.com/photos/1444442/pexels-photo-1444442.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop"
+                src="https://images.pexels.com/photos/9419108/pexels-photo-9419108.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop"
                 alt="Bridal Package"
                 fill
                 className="object-cover hover:scale-110 transition-transform duration-700"
@@ -188,4 +188,4 @@ export default function Services() {
       </div>
     </section>
   );
-}
+            }
