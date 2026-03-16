@@ -5,12 +5,12 @@ import { Instagram, Youtube, Play } from 'lucide-react';
 import Image from 'next/image';
 
 const portfolioItems = [
-  { id: 1, type: 'image', src: 'https://images.pexels.com/photos/3151944/pexels-photo-3151944.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop', alt: 'Bridal Transformation' },
-  { id: 2, type: 'video', src: 'https://images.pexels.com/photos/1055691/pexels-photo-1055691.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop', alt: 'Glam Look Tutorial' },
-  { id: 3, type: 'image', src: 'https://images.pexels.com/photos/2467988/pexels-photo-2467988.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop', alt: 'Before & After' },
-  { id: 4, type: 'image', src: 'https://images.pexels.com/photos/1578871/pexels-photo-1578871.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop', alt: 'Party Makeup' },
-  { id: 5, type: 'video', src: 'https://images.pexels.com/photos/3065209/pexels-photo-3065209.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop', alt: 'Hair Styling' },
-  { id: 6, type: 'image', src: 'https://images.pexels.com/photos/887352/pexels-photo-887352.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop', alt: 'Nail Art' },
+  { id: 1, type: 'image', src: 'https://images.pexels.com/photos/7349020/pexels-photo-7349020.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop', alt: 'Bridal Transformation' },
+  { id: 2, type: 'video', src: 'https://images.pexels.com/photos/3221176/pexels-photo-3221176.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop', alt: 'Glam Look Tutorial' },
+  { id: 3, type: 'image', src: 'https://images.pexels.com/photos/12260115/pexels-photo-12260115.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop', alt: 'Before & After' },
+  { id: 4, type: 'image', src: 'https://images.pexels.com/photos/9419108/pexels-photo-9419108.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop', alt: 'Party Makeup' },
+  { id: 5, type: 'video', src: 'https://images.pexels.com/photos/6171/pexels-photo-6171.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop', alt: 'Hair Styling' },
+  { id: 6, type: 'image', src: 'https://images.pexels.com/photos/15491630/pexels-photo-15491630.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop', alt: 'Nail Art' },
 ];
 
 export default function Portfolio() {
@@ -75,7 +75,6 @@ export default function Portfolio() {
           </motion.div>
         </div>
 
-        {/* Masonry-style Grid */}
         <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
           {portfolioItems.map((item, index) => (
             <motion.div
