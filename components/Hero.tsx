@@ -31,7 +31,6 @@ export default function Hero() {
           transition={{ duration: 1, ease: 'easeOut' }}
           className="relative"
         >
-          {/* Decorative Element */}
           <div className="absolute left-1/2 -translate-x-1/2 -top-16 w-32 h-32 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#c88d94]/30 via-transparent to-transparent blur-xl rounded-full"></div>
           
           <h2 className="text-[#e6c1c5] font-serif italic text-xl md:text-3xl mb-4 tracking-widest uppercase">
@@ -63,7 +62,6 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      {/* Scroll Indicator */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
