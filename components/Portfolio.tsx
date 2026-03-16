@@ -1,102 +1,128 @@
 'use client';
 
-import { useState } from 'react';
 import { motion } from 'motion/react';
-import { Play } from 'lucide-react';
+import { Instagram, Youtube, Play } from 'lucide-react';
 import Image from 'next/image';
 
 const portfolioItems = [
-  { id: 1, category: 'Bridal', type: 'image', src: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=800&q=80', alt: 'Bridal Transformation' },
-  { id: 2, category: 'Glam', type: 'video', src: 'https://images.unsplash.com/photo-1512496015851-a1c8d4f05118?auto=format&fit=crop&w=800&q=80', alt: 'Glam Look Tutorial' },
-  { id: 3, category: 'Bridal', type: 'video', src: 'https://images.unsplash.com/photo-1522337360788-8b13fee7a34b?auto=format&fit=crop&w=800&q=80', alt: 'Before & After' },
-  { id: 4, category: 'Glam', type: 'image', src: 'https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=800&q=80', alt: 'Party Makeup' },
-  { id: 5, category: 'Hair', type: 'video', src: 'https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=800&q=80', alt: 'Hair Styling' },
-  { id: 6, category: 'Nails', type: 'image', src: 'https://images.unsplash.com/photo-1519014816548-bf5fe059e98b?auto=format&fit=crop&w=800&q=80', alt: 'Nail Art' },
-  { id: 7, category: 'Bridal', type: 'image', src: 'https://images.unsplash.com/photo-1500917293891-ef795e70e1f6?auto=format&fit=crop&w=800&q=80', alt: 'Bridal Look' },
-  { id: 8, category: 'Hair', type: 'video', src: 'https://images.unsplash.com/photo-1595476108010-b4d1f10d5e43?auto=format&fit=crop&w=800&q=80', alt: 'Hair Styling' },
+  { id: 1, type: 'image', src: 'https://images.pexels.com/photos/3151944/pexels-photo-3151944.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop', alt: 'Bridal Transformation' },
+  { id: 2, type: 'video', src: 'https://images.pexels.com/photos/1055691/pexels-photo-1055691.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop', alt: 'Glam Look Tutorial' },
+  { id: 3, type: 'image', src: 'https://images.pexels.com/photos/2467988/pexels-photo-2467988.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop', alt: 'Before & After' },
+  { id: 4, type: 'image', src: 'https://images.pexels.com/photos/1578871/pexels-photo-1578871.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop', alt: 'Party Makeup' },
+  { id: 5, type: 'video', src: 'https://images.pexels.com/photos/3065209/pexels-photo-3065209.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop', alt: 'Hair Styling' },
+  { id: 6, type: 'image', src: 'https://images.pexels.com/photos/887352/pexels-photo-887352.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop', alt: 'Nail Art' },
 ];
 
-const categories = ['All', 'Bridal', 'Hair', 'Nails', 'Glam'];
-
 export default function Portfolio() {
-  const [activeCategory, setActiveCategory] = useState('All');
-
-  const filteredItems = activeCategory === 'All' 
-    ? portfolioItems 
-    : portfolioItems.filter(item => item.category === activeCategory);
-
   return (
     <section id="portfolio" className="py-24 md:py-32 bg-black relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        {/* Filter Pills */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {categories.map((category) => (
-            <button
-              key={category}
-              onClick={() => setActiveCategory(category)}
-              className={`px-6 py-2 rounded-full border transition-all duration-300 ${
-                activeCategory === category
-                  ? 'bg-[#e6c1c5] text-black border-[#e6c1c5]'
-                  : 'bg-transparent text-zinc-300 border-zinc-700 hover:border-[#e6c1c5] hover:text-[#e6c1c5]'
-              }`}
+        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+          <div className="max-w-2xl">
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-[#d48995] font-serif italic text-xl mb-4"
             >
-              {category}
-            </button>
-          ))}
+              Our Work
+            </motion.h2>
+            <motion.h3
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="text-4xl md:text-5xl font-serif font-bold text-white mb-6"
+            >
+              Transformations
+            </motion.h3>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="text-zinc-400 text-lg font-light"
+            >
+              Explore our gallery of stunning bridal makeovers, party glam, and intricate hair styling.
+            </motion.p>
+          </div>
+          
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3 }}
+            className="flex space-x-4"
+          >
+            <a
+              href="https://www.instagram.com/gms_geetanjali_makeup"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center space-x-2 px-6 py-3 rounded-full border border-zinc-800 hover:border-[#c88d94]/50 text-zinc-300 hover:text-[#e6c1c5] transition-all duration-300 group"
+            >
+              <Instagram className="w-5 h-5 group-hover:scale-110 transition-transform" />
+              <span className="text-sm uppercase tracking-wider font-medium">Follow Us</span>
+            </a>
+            <a
+              href="https://www.youtube.com/@GMS_Geetanjali_Makeup_Studio"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center space-x-2 px-6 py-3 rounded-full border border-zinc-800 hover:border-[#c88d94]/50 text-zinc-300 hover:text-[#e6c1c5] transition-all duration-300 group"
+            >
+              <Youtube className="w-5 h-5 group-hover:scale-110 transition-transform" />
+              <span className="text-sm uppercase tracking-wider font-medium">Watch</span>
+            </a>
+          </motion.div>
         </div>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-24">
-          {filteredItems.map((item, index) => (
+        {/* Masonry-style Grid */}
+        <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
+          {portfolioItems.map((item, index) => (
             <motion.div
               key={item.id}
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.4, delay: index * 0.05 }}
-              className="relative aspect-square rounded-2xl overflow-hidden border border-[#c88d94]/20 group"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="relative group break-inside-avoid overflow-hidden rounded-2xl border border-zinc-800 hover:border-[#c88d94]/30 transition-colors"
             >
-              <Image
-                src={item.src}
-                alt={item.alt}
-                fill
-                className="object-cover group-hover:scale-110 transition-transform duration-700"
-                referrerPolicy="no-referrer"
-              />
-              {item.type === 'video' && (
-                <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/40 transition-colors">
-                  <div className="w-12 h-12 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/30">
-                    <Play className="w-5 h-5 text-white ml-1" />
+              <div className="relative w-full h-auto aspect-[3/4]">
+                <Image
+                  src={item.src}
+                  alt={item.alt}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
+                  referrerPolicy="no-referrer"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                
+                {item.type === 'video' && (
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-16 h-16 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/20 group-hover:bg-[#c88d94]/80 group-hover:border-transparent transition-all duration-300">
+                      <Play className="w-6 h-6 text-white ml-1" />
+                    </div>
                   </div>
+                )}
+                
+                <div className="absolute bottom-0 left-0 p-6 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                  <h4 className="text-white font-serif text-xl mb-1">{item.alt}</h4>
+                  <p className="text-[#d48995] text-sm uppercase tracking-widest font-medium">View on Instagram →</p>
                 </div>
-              )}
+              </div>
             </motion.div>
           ))}
         </div>
 
-        {/* Social Sections */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* YouTube Shorts */}
-          <div className="bg-[#111] border border-zinc-800 rounded-3xl p-8">
-            <h3 className="text-2xl font-serif text-white mb-6">YouTube Shorts</h3>
-            <div className="aspect-[9/16] bg-zinc-900 rounded-2xl flex items-center justify-center relative overflow-hidden border border-zinc-800">
-              <div className="w-16 h-16 bg-red-600 rounded-2xl flex items-center justify-center">
-                <Play className="w-8 h-8 text-white ml-1" />
-              </div>
-            </div>
-          </div>
-
-          {/* Instagram Reels */}
-          <div className="bg-[#111] border border-zinc-800 rounded-3xl p-8">
-            <h3 className="text-2xl font-serif text-white mb-6">Instagram Reels</h3>
-            <div className="aspect-[9/16] bg-zinc-900 rounded-2xl flex items-center justify-center relative overflow-hidden border border-zinc-800">
-              <div className="w-16 h-16 bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 rounded-2xl flex items-center justify-center">
-                <Play className="w-8 h-8 text-white ml-1" />
-              </div>
-            </div>
-          </div>
+        <div className="mt-16 text-center">
+          <a
+            href="https://www.instagram.com/gms_geetanjali_makeup"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center px-8 py-4 rounded-full border border-[#c88d94]/50 text-[#e6c1c5] font-semibold text-sm uppercase tracking-widest hover:bg-[#c88d94]/10 transition-colors duration-300"
+          >
+            View Full Portfolio
+          </a>
         </div>
-
       </div>
     </section>
   );

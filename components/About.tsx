@@ -19,7 +19,7 @@ export default function About() {
             <div className="relative aspect-[3/4] w-full max-w-md mx-auto rounded-t-full overflow-hidden border border-[#c88d94]/30 p-2">
               <div className="relative w-full h-full rounded-t-full overflow-hidden">
                 <Image
-                  src="https://images.unsplash.com/photo-1516975080661-412211424b91?auto=format&fit=crop&w=800&q=80"
+                  src="https://instagram.fdnk3-1.fna.fbcdn.net/v/t51.82787-19/599636375_18085082927475034_7816679227955421706_n.jpg?efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmMyIn0&_nc_ht=instagram.fdnk3-1.fna.fbcdn.net&_nc_cat=110&_nc_oc=Q6cZ2QHuU6FxNKuoiQV2defnHgdCguO7YcDBpjQpI9yNt3G7C86u_jjpayfMkTUInIYpzRQ&_nc_ohc=QEcjQrmNYJwQ7kNvwFEQmOJ&_nc_gid=1vZq3HwM4N0icX57J7G0MQ&edm=AEF8tYYBAAAA&ccb=7-5&oh=00_AfwvPlaGL5NLDgfUzLPfRDxrmuBfpl3ZzNighzQMazAMrg&oe=69BD9A84&_nc_sid=1e20d2"
                   alt="Anjali Gupta - Lead Makeup Artist"
                   fill
                   className="object-cover hover:scale-105 transition-all duration-700"

@@ -19,6 +19,7 @@ export default function Navbar() {
 
   const navLinks = [
     { name: 'Home', href: '#home' },
+    { name: 'About', href: '#about' },
     { name: 'Services', href: '#services' },
     { name: 'Portfolio', href: '#portfolio' },
     { name: 'Contact', href: '#contact' },
@@ -34,35 +35,31 @@ export default function Navbar() {
         <div className="flex justify-between items-center">
           <div className="flex-shrink-0">
             <Link href="#home" className="flex flex-col">
-              <span className="font-serif text-2xl md:text-3xl font-bold text-[#e6c1c5]">
-                Anjali Gupta
+              <span className="font-serif text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#e6c1c5] via-[#d48995] to-[#b76e79]">
+                GMS
               </span>
               <span className="text-[10px] md:text-xs tracking-[0.2em] text-zinc-400 uppercase">
-                Makeup Studio & Academy
+                Geetanjali Makeup Studio
               </span>
             </Link>
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-6">
-            {navLinks.map((link, index) => (
-              <div key={link.name} className="flex items-center">
-                <Link
-                  href={link.href}
-                  className="text-sm font-medium text-zinc-300 hover:text-[#e6c1c5] transition-colors uppercase tracking-wider"
-                >
-                  {link.name}
-                </Link>
-                {index < navLinks.length - 1 && (
-                  <span className="text-zinc-600 mx-6">|</span>
-                )}
-              </div>
+          <div className="hidden md:flex items-center space-x-8">
+            {navLinks.map((link) => (
+              <Link
+                key={link.name}
+                href={link.href}
+                className="text-sm font-medium text-zinc-300 hover:text-[#e6c1c5] transition-colors uppercase tracking-wider"
+              >
+                {link.name}
+              </Link>
             ))}
             <a
               href="https://wa.me/919205358360?text=Hi%20Anjali,%20I%20would%20like%20to%20enquire%20about%20your%20makeup%20services."
               target="_blank"
               rel="noopener noreferrer"
-              className="ml-6 px-8 py-2.5 rounded-full bg-gradient-to-r from-[#e6c1c5] via-[#d48995] to-[#b76e79] text-black font-semibold text-sm uppercase tracking-wider hover:opacity-90 transition-opacity"
+              className="px-6 py-2.5 rounded-full bg-gradient-to-r from-[#e6c1c5] via-[#d48995] to-[#b76e79] text-black font-semibold text-sm uppercase tracking-wider hover:opacity-90 transition-opacity"
             >
               Book Now
             </a>
